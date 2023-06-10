@@ -99,6 +99,22 @@ public class Stats : MonoBehaviour
             }
         }
     }
+    public void CopyStats(Stats newStats)
+    {
+        this.health = newStats.health;
+        this.maxHealth = newStats.maxHealth;
+        this.armor = newStats.armor;
+        this.maxArmor = newStats.maxArmor;
+        this.energy = newStats.energy;
+        this.maxEnergy = newStats.maxEnergy;
+        this.energyRechargePerSec = newStats.energyRechargePerSec;
+        this.armorIncrease = newStats.armorIncrease;
+        this.timeBetweenArmorRegen = newStats.timeBetweenArmorRegen;
+        this.rechargeFreq = newStats.rechargeFreq;
+        this.timeBetweenDamage = newStats.timeBetweenDamage;
+        this.critChance = newStats.critChance;
+        this.critMultiplier = newStats.critMultiplier;
+    }
 
     // Start is called before the first frame update
     void Start()

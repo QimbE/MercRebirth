@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.18f1 (3129e69bc0c7) revision 3221990'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 8157 MB
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 16335 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2021.3.18f1\Editor\Unity.exe
+D:\Unity\2021.3.18f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker1
 -projectPath
-D:/Course Project/Merc Rebirth
+D:/Лабы/Unity projects/Merc Rebith 0.8.1/Merc Rebirth
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-51004
-Successfully changed project path to: D:/Course Project/Merc Rebirth
-D:/Course Project/Merc Rebirth
+60594
+Successfully changed project path to: D:/Лабы/Unity projects/Merc Rebith 0.8.1/Merc Rebirth
+D:/Лабы/Unity projects/Merc Rebith 0.8.1/Merc Rebirth
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,62 +47,195 @@ D:/Course Project/Merc Rebirth
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [1896] Host "[IP] 192.168.1.69 [Port] 0 [Flags] 2 [Guid] 430392686 [EditorId] 430392686 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-HS2KJMA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [16728] Host "[IP] 192.168.1.4 [Port] 0 [Flags] 2 [Guid] 248392691 [EditorId] 248392691 [Version] 1048832 [Id] WindowsEditor(7,HOME-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [1896] Host "[IP] 192.168.1.69 [Port] 0 [Flags] 2 [Guid] 430392686 [EditorId] 430392686 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-HS2KJMA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [16728] Host "[IP] 192.168.1.4 [Port] 0 [Flags] 2 [Guid] 248392691 [EditorId] 248392691 [Version] 1048832 [Id] WindowsEditor(7,HOME-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 314.04 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 116.57 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.18f1 (3129e69bc0c7)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Course Project/Merc Rebirth/Assets
+[Subsystems] Discovering subsystems at path D:/Unity/2021.3.18f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Лабы/Unity projects/Merc Rebith 0.8.1/Merc Rebirth/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c82)
+    Renderer: NVIDIA GeForce RTX 2060 SUPER (ID=0x1f06)
     Vendor:   NVIDIA
-    VRAM:     4017 MB
+    VRAM:     8019 MB
     Driver:   31.0.15.3168
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56244
+Mono path[0] = 'D:/Unity/2021.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2021.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/2021.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56004
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.206265 seconds.
+Register platform support module: D:/Unity/2021.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003802 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 173.23 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 108.92 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  8.193 seconds
+- Completed reload, in  0.702 seconds
 Domain Reload Profiling:
-	ReloadAssembly (8195ms)
-		BeginReloadAssembly (5776ms)
+	ReloadAssembly (702ms)
+		BeginReloadAssembly (103ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (1617ms)
-			LoadAssemblies (5772ms)
+		EndReloadAssembly (486ms)
+			LoadAssemblies (102ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (865ms)
+			SetupTypeCache (108ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (158ms)
-			SetupLoadedEditorAssemblies (471ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (299ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (17ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (173ms)
+				RefreshPlugins (109ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (178ms)
-				ProcessInitializeOnLoadMethodAttributes (99ms)
+				ProcessInitializeOnLoadAttributes (133ms)
+				ProcessInitializeOnLoadMethodAttributes (49ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.022019 seconds.
+Registered in 0.017868 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Лабы\Unity projects\Merc Rebith 0.8.1\Merc Rebirth\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\Лабы\Unity projects\Merc Rebith 0.8.1\Merc Rebirth\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 109.01 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.374 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1375ms)
+		BeginReloadAssembly (140ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (1106ms)
+			LoadAssemblies (128ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (279ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (73ms)
+			SetupLoadedEditorAssemblies (607ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (109ms)
+				BeforeProcessingInitializeOnLoad (112ms)
+				ProcessInitializeOnLoadAttributes (339ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.82 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4017 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 81 unused Assets / (277.2 KB). Loaded Objects now: 4508.
+Memory consumption went from 174.0 MB to 173.7 MB.
+Total: 3.643000 ms (FindLiveObjects: 0.345600 ms CreateObjectMapping: 0.098500 ms MarkObjects: 2.969500 ms  DeleteObjects: 0.228300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 29233.221370 seconds.
+  path: Assets/RoomGeneration/prefabs/RoomAnchors/BL.prefab
+  artifactKey: Guid(43ecfdf1dcea6ba4f9bec8f0d3b9d2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/prefabs/RoomAnchors/BL.prefab using Guid(43ecfdf1dcea6ba4f9bec8f0d3b9d2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6483a1afcfd4b147304b5acb96841a1c') in 0.239977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/RoomGeneration/prefabs/RoomAnchors/TL.prefab
+  artifactKey: Guid(72512897c437b4f439c053c78a77e06d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/prefabs/RoomAnchors/TL.prefab using Guid(72512897c437b4f439c053c78a77e06d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edc0b38eb80c461e10fa845280843b62') in 0.010443 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/RoomGeneration/prefabs/RoomAnchors/T.prefab
+  artifactKey: Guid(264d5215ada509447b489eb0154636df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/prefabs/RoomAnchors/T.prefab using Guid(264d5215ada509447b489eb0154636df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af50db3c64887fda73432d1d1ee71efc') in 0.029175 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/RoomGeneration/prefabs/RoomAnchors/TBL.prefab
+  artifactKey: Guid(3965534cc68b0044ab24873d037a8838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/prefabs/RoomAnchors/TBL.prefab using Guid(3965534cc68b0044ab24873d037a8838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b32c70a2ac871feb9deef97417071e17') in 0.095494 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/RoomGeneration/prefabs/RoomAnchors/TB.prefab
+  artifactKey: Guid(bc0430a2a7e482c42be2568cba88b141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/prefabs/RoomAnchors/TB.prefab using Guid(bc0430a2a7e482c42be2568cba88b141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd201f303a7478f85a082edbea1eac88b') in 0.011787 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/RoomGeneration/prefabs/RoomAnchors/L.prefab
+  artifactKey: Guid(5f7c09751751cc34595d3b4db2e1c9ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/prefabs/RoomAnchors/L.prefab using Guid(5f7c09751751cc34595d3b4db2e1c9ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0747ccde7cbde304fca1be394ee2daac') in 0.010632 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.654900 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/L Room Preset.prefab
+  artifactKey: Guid(be5f660b75e593c4b99741ca387af9f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/L Room Preset.prefab using Guid(be5f660b75e593c4b99741ca387af9f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20999da27c3346a483f1bfad85a25290') in 1.591419 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/Layouts/X_Layout.prefab
+  artifactKey: Guid(0d15e1bcc2a368a41a8f753e86fe0bbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/Layouts/X_Layout.prefab using Guid(0d15e1bcc2a368a41a8f753e86fe0bbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c13ddb5693672e1208725309e47027be') in 0.192402 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/RBL Room Preset.prefab
+  artifactKey: Guid(96ef236bbac61e94698c1cf449059737) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/RBL Room Preset.prefab using Guid(96ef236bbac61e94698c1cf449059737) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24f21b9812677137d627d399890945ed') in 0.049647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 42.528209 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/Walls/L Room Preset.prefab
+  artifactKey: Guid(652edf138bfd3c74796c9577605f1fbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/Walls/L Room Preset.prefab using Guid(652edf138bfd3c74796c9577605f1fbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97effba1dff257cd772721469a2ee472') in 0.026315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/Walls/RBL Room Preset.prefab
+  artifactKey: Guid(dd314b35ce09a8f44aef85e35ac591c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/Walls/RBL Room Preset.prefab using Guid(dd314b35ce09a8f44aef85e35ac591c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d931f47df9e487fac300d284f0a628e') in 0.032727 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/Walls/TB Room Preset.prefab
+  artifactKey: Guid(6d9dec6970b46564384c5409bba35fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/Walls/TB Room Preset.prefab using Guid(6d9dec6970b46564384c5409bba35fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bb08530c99421b440a99d9bde41ed14') in 0.022389 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/Walls/RL Room Preset.prefab
+  artifactKey: Guid(129bd3b68d3cb4b42a16b3a18e47c795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/Walls/RL Room Preset.prefab using Guid(129bd3b68d3cb4b42a16b3a18e47c795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f72da8f4fc093f6087a6297aec7103eb') in 0.028320 seconds 

@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class BoxSpriteUpdate : MonoBehaviour
 {
-    public SpriteRenderer topSpriteRenderer;
-    public SpriteRenderer bottomSpriteRenderer;
+    SpriteRenderer topSpriteRenderer;
+    SpriteRenderer bottomSpriteRenderer;
     public Sprite[] topSprites;
     public Sprite[] bottomSprites;
-    public int health;
-    public int maxHealth;
+    int health;
+    int maxHealth;
 
     private void Update()
     {

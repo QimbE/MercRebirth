@@ -4,16 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class DroneAI : MonoBehaviour
+public class DroneAI : Enemy
 {
-    /// <summary>
-    /// Координаты игрока
-    /// </summary>
-    public Transform playerTransform;
-    /// <summary>
-    /// Статы игрока
-    /// </summary>
-    public Stats playerStats;
 
 
     public GameObject bullet;
@@ -56,14 +48,7 @@ public class DroneAI : MonoBehaviour
     private float angleCir = 0;
     private int dir =1;
     private Vector2 curDirection;
-    private Rigidbody2D rb;
     private bool isRunning;
-    private Transform anchor;
-    private Rect roomRect;
-    private Vector2 movement;
-    private Vector3 direction;
-    private Stats selfStats;
-
 
 
     // Start is called before the first frame update
@@ -99,13 +84,7 @@ public class DroneAI : MonoBehaviour
         //Нахождение направления движения
         if (roomRect.Contains(playerTransform.position))
         {
-            if (timeBtwShots>=startTimeBtwShots)
-            {
-                Vector3 difference = playerTransform.position - shotPoint.position;
-                float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-                Instantiate(bullet, shotPoint.position, Quaternion.Euler(0f, 0f, rotZ));
-                timeBtwShots = 0;
-            }
+            DealDamage();
             isRunning = true;
             //anim.SetBool("isRunning", isRunning);
             direction = playerTransform.position - transform.position;
@@ -161,7 +140,17 @@ public class DroneAI : MonoBehaviour
             rb.velocity = Vector3.zero;
         }
     }
-    public void MoveCharacter(Vector2 movement)
+    public override void DealDamage()
+    {
+        if (timeBtwShots >= startTimeBtwShots)
+        {
+            Vector3 difference = playerTransform.position - shotPoint.position;
+            float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            Instantiate(bullet, shotPoint.position, Quaternion.Euler(0f, 0f, rotZ));
+            timeBtwShots = 0;
+        }
+    }
+    public override void MoveCharacter(Vector2 movement)
     {
         curDirection = new Vector2(Mathf.Cos(angleCir * dir), Mathf.Sin(angleCir * dir));
         rb.velocity+= (0.4f * speed * movement + 0.6f * direction.magnitude * curDirection)*0.5f;

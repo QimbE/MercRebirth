@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         enemies = GameObject.FindGameObjectWithTag("EnemyTypes").GetComponent<EnemyTypes>().enemies;
-        Invoke("SpawnEnemy", 3f);
+        SpawnEnemy();
     }
 
     void SpawnEnemy()

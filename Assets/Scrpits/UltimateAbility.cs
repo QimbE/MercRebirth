@@ -22,6 +22,7 @@ public class UltimateAbility : MonoBehaviour
     private float currentTimeBetweenDealDamage = 0f;
     private float currentTime;
     public bool isUltActive = false;
+    private bool isCoolDown = false;
     private float originalRechargeFreq;
     private Vector3 curRotation;
 
@@ -67,18 +68,16 @@ public class UltimateAbility : MonoBehaviour
             if (currentTime >= ultTime && gunCopy != null)
             {
                 GameObject.Destroy(gunCopy);
-            }
-            if (currentTime >= ultTime + coolDown)
-            {
-                playerStats.rechargeFreq = originalRechargeFreq;
                 isUltActive = false;
+                isCoolDown = true;
             }
         }
+
         //»дЄт ульта с холодным оружием в руках
         else if (isUltActive && melee.activeInHierarchy)
         {
             currentTime += Time.deltaTime;
-            currentTimeBetweenDealDamage+= Time.deltaTime;
+            currentTimeBetweenDealDamage += Time.deltaTime;
             if (transform.localScale.x < 0)
             {
                 curRotation += new Vector3(0, 0, rotationSpeed);
@@ -100,12 +99,22 @@ public class UltimateAbility : MonoBehaviour
             {
                 meleeAnim.SetBool("isUlting", false);
                 playerAnim.SetBool("isUlting", false);
+                isUltActive = false;
+                isCoolDown = true;
                 transform.rotation = Quaternion.identity;
             }
             if (currentTime >= ultTime + coolDown)
             {
                 playerStats.rechargeFreq = originalRechargeFreq;
-                isUltActive = false;
+            }
+        }
+        if (isCoolDown)
+        {
+            currentTime += Time.deltaTime;
+            if (currentTime >= ultTime + coolDown)
+            {
+                playerStats.rechargeFreq = originalRechargeFreq;
+                isCoolDown = false;
             }
         }
     }
@@ -114,7 +123,7 @@ public class UltimateAbility : MonoBehaviour
         Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, ultRadius);
         for (int i = 0; i < enemies.Length; i++)
         {
-            if (enemies[i].CompareTag("Enemy"))
+            if (enemies[i].CompareTag("Enemy") || enemies[i].CompareTag("Box"))
             {
                 if (UnityEngine.Random.Range(1, 100) <= playerStats.critChance)
                 {

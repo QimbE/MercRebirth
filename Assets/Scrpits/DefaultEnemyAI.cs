@@ -2,29 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DefaultEnemyAI : MonoBehaviour
+public abstract class Enemy : MonoBehaviour
 {
     public Transform playerTransform;
     public Stats playerStats;
+    public int damage;
+    protected Transform anchor;
+    protected Rect roomRect;
+    protected Vector2 movement;
+    protected Vector3 direction;
+    protected Stats selfStats;
+    protected Rigidbody2D rb;
+    public abstract void DealDamage();
+    public abstract void MoveCharacter(Vector2 movement);
+}
+public class DefaultEnemyAI : Enemy
+{
     public LayerMask playerLayer;
 
     public Animator anim;
-    public int damage;
     public Transform attackPos;
     public float damageRange;
     public float attackRange;
     public float speed = 1f;
     public float friction = 0.7f;
 
-    private Rigidbody2D rb;
     private Rigidbody2D playerRb;
     private bool isRunning;
     private bool isInAttackRange;
-    private Transform anchor;
-    private Rect roomRect;
-    private Vector2 movement;
-    private Vector3 direction;
-    private Stats selfStats;
 
     // Start is called before the first frame update
     void Start()
@@ -86,24 +91,27 @@ public class DefaultEnemyAI : MonoBehaviour
             transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
     }
-    public void MoveCharacter(Vector2 movement)
+    public override void MoveCharacter(Vector2 movement)
     {
         rb.MovePosition((Vector2)transform.position + (movement * speed * Time.deltaTime));
     }
-    public void DealDamage()
+    public override void DealDamage()
     {
-        Collider2D playerCollider = Physics2D.OverlapCircle(attackPos.position, damageRange, playerLayer);
-        if (playerCollider != null)
+        Collider2D[] playerCollider = Physics2D.OverlapCircleAll(attackPos.position, damageRange, playerLayer);
+        for (int i = 0; i < playerCollider.Length; i++)
         {
-            if (playerCollider.CompareTag("Player"))
+            if (playerCollider[i] != null)
             {
-                if (Random.Range(1, 100) <= selfStats.critChance)
+                if (playerCollider[i].CompareTag("Player") || playerCollider[i].CompareTag("Box"))
                 {
-                    playerCollider.GetComponent<Stats>().TakeDamage((int)(damage * (1 + selfStats.critMultiplier / 100f)));
-                }
-                else
-                {
-                    playerCollider.GetComponent<Stats>().TakeDamage(damage);
+                    if (Random.Range(1, 100) <= selfStats.critChance)
+                    {
+                        playerCollider[i].GetComponent<Stats>().TakeDamage((int)(damage * (1 + selfStats.critMultiplier / 100f)));
+                    }
+                    else
+                    {
+                        playerCollider[i].GetComponent<Stats>().TakeDamage(damage);
+                    }
                 }
             }
         }

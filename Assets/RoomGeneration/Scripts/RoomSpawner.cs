@@ -23,6 +23,7 @@ public class RoomSpawner : MonoBehaviour
     private SinglewayRooms singlewayRooms;
     private CornerRooms cornerRooms;
     private RoomPresets roomPresets;
+    private RoomLayouts roomLayouts;
     private int rand;
     private bool isSpawned = false;
     private float waitTime = 3f;
@@ -47,6 +48,7 @@ public class RoomSpawner : MonoBehaviour
     private void Update()
     {
         roomPresets = GameObject.FindGameObjectWithTag("RoomPresets").GetComponent<RoomPresets>();
+        roomLayouts = GameObject.FindGameObjectWithTag("RoomLayouts").GetComponent<RoomLayouts>();
         if (counter==0 || counter>=maxCounter)
         {
             singlewayRooms = GameObject.FindGameObjectWithTag("Rooms").GetComponent<SinglewayRooms>();
@@ -178,87 +180,54 @@ public class RoomSpawner : MonoBehaviour
         if (objName.Contains('L') && !isLeftFree && !(dir == Direction.Left || dir == Direction.BottomLeft || dir == Direction.TopLeft || dir == Direction.RightLeft))
             objName = objName.Remove(objName.IndexOf('L'), 1);
 
+        int chk = Random.Range(0, 2);
         if (objName == "T")
-        {
-            rand = Random.Range(0, roomPresets.Ts.Length);
-            Instantiate(roomPresets.Ts[rand], transform.position, roomPresets.Ts[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.Ts[chk], transform.position, roomPresets.Ts[chk].transform.rotation);
         else if (objName == "R")
-        {
-            rand = Random.Range(0, roomPresets.Rs.Length);
-            Instantiate(roomPresets.Rs[rand], transform.position, roomPresets.Rs[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.Rs[chk], transform.position, roomPresets.Rs[chk].transform.rotation);
         else if (objName == "B")
-        {
-            rand = Random.Range(0, roomPresets.Bs.Length);
-            Instantiate(roomPresets.Bs[rand], transform.position, roomPresets.Bs[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.Bs[chk], transform.position, roomPresets.Bs[chk].transform.rotation);
         else if (objName == "L")
-        {
-            rand = Random.Range(0, roomPresets.Ls.Length);
-            Instantiate(roomPresets.Ls[rand], transform.position, roomPresets.Ls[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.Ls[chk], transform.position, roomPresets.Ls[chk].transform.rotation);
         else if (objName == "TR")
-        {
-            rand = Random.Range(0, roomPresets.TRs.Length);
-            Instantiate(roomPresets.TRs[rand], transform.position, roomPresets.TRs[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.TRs[chk], transform.position, roomPresets.TRs[chk].transform.rotation);
         else if (objName == "TB")
-        {
-            rand = Random.Range(0, roomPresets.TBs.Length);
-            Instantiate(roomPresets.TBs[rand], transform.position, roomPresets.TBs[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.TBs[chk], transform.position, roomPresets.TBs[chk].transform.rotation);
         else if (objName == "TL")
-        {
-            rand = Random.Range(0, roomPresets.TLs.Length);
-            Instantiate(roomPresets.TLs[rand], transform.position, roomPresets.TLs[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.TLs[chk], transform.position, roomPresets.TLs[chk].transform.rotation);
         else if (objName == "RB")
-        {
-            rand = Random.Range(0, roomPresets.RBs.Length);
-            Instantiate(roomPresets.RBs[rand], transform.position, roomPresets.RBs[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.RBs[chk], transform.position, roomPresets.RBs[chk].transform.rotation);
         else if (objName == "RL")
-        {
-            rand = Random.Range(0, roomPresets.RLs.Length);
-            Instantiate(roomPresets.RLs[rand], transform.position, roomPresets.RLs[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.RLs[chk], transform.position, roomPresets.RLs[chk].transform.rotation);
         else if (objName == "BL")
-        {
-            rand = Random.Range(0, roomPresets.BLs.Length);
-            Instantiate(roomPresets.BLs[rand], transform.position, roomPresets.BLs[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.BLs[chk], transform.position, roomPresets.BLs[chk].transform.rotation);
         else if (objName == "TRB")
-        {
-            rand = Random.Range(0, roomPresets.TRBs.Length);
-            Instantiate(roomPresets.TRBs[rand], transform.position, roomPresets.TRBs[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.TRBs[chk], transform.position, roomPresets.TRBs[chk].transform.rotation);
         else if (objName == "TRL")
-        {
-            rand = Random.Range(0, roomPresets.TRLs.Length);
-            Instantiate(roomPresets.TRLs[rand], transform.position, roomPresets.TRLs[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.TRLs[chk], transform.position, roomPresets.TRLs[chk].transform.rotation);
         else if (objName == "TBL")
-        {
-            rand = Random.Range(0, roomPresets.TBLs.Length);
-            Instantiate(roomPresets.TBLs[rand], transform.position, roomPresets.TBLs[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.TBLs[chk], transform.position, roomPresets.TBLs[chk].transform.rotation);
         else if (objName == "RBL")
-        {
-            rand = Random.Range(0, roomPresets.RBLs.Length);
-            Instantiate(roomPresets.RBLs[rand], transform.position, roomPresets.RBLs[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.RBLs[chk], transform.position, roomPresets.RBLs[chk].transform.rotation);
         else if (objName == "TRBL")
-        {
-            rand = Random.Range(0, roomPresets.TRBLs.Length);
-            Instantiate(roomPresets.TRBLs[rand], transform.position, roomPresets.TRBLs[rand].transform.rotation);
-        }
+            Instantiate(roomPresets.TRBLs[chk], transform.position, roomPresets.TRBLs[chk].transform.rotation);
+        if (counter!=0)
+            SetLayout(chk);
     }
 
-    //void SetLayout()
-    //{
-
-    //}
+    void SetLayout(int type)
+    {
+        if (type == 0)
+        {
+            int ind = Random.Range(0, roomLayouts.boxLayouts.Length);
+            Instantiate(roomLayouts.boxLayouts[ind], transform.position, roomLayouts.boxLayouts[ind].transform.rotation);
+        }
+        else
+        {
+            int ind = Random.Range(0, roomLayouts.boxLayouts.Length);
+            Instantiate(roomLayouts.circleLayouts[ind], transform.position, roomLayouts.boxLayouts[ind].transform.rotation);
+        }
+    }
 
     private void OnTriggerStay2D(Collider2D other)
     {

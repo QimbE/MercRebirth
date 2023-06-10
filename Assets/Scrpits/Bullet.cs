@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
         if (hitInfo.collider != null)
         {
-            if (hitInfo.collider.CompareTag(hitTag))
+            if (hitInfo.collider.CompareTag(hitTag) || hitInfo.collider.CompareTag("Box"))
             {
                 if (Random.Range(1, 100) <= playerStats.critChance)
                 {

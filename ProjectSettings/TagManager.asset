@@ -13,7 +13,9 @@ TagManager:
   - RoomPresets
   - Wall
   - Anchor
+  - Box
   - EnemyTypes
+  - RoomLayouts
   layers:
   - Default
   - TransparentFX
@@ -24,9 +26,9 @@ TagManager:
   - Enemies
   - Player
   - Walls
-  - BoxBottom
-  - BoxTop
+  - Boxes
   - EnemyTiles
+  - 
   - 
   - 
   - 

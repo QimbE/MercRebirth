@@ -58,7 +58,7 @@ public class Melee : MonoBehaviour
         Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemyLayer);
         for (int i = 0; i < enemies.Length; i++)
         {
-            if (enemies[i].CompareTag("Enemy"))
+            if (enemies[i].CompareTag("Enemy") || enemies[i].CompareTag("Box"))
             {
                 if (Random.Range(1, 100) <= playerStats.critChance)
                 {

@@ -18,7 +18,7 @@ public class Stats : MonoBehaviour
     public int energyRechargePerSec;
     public int armorIncrease;
     public float timeBetweenArmorRegen = 15f;
-    internal float rechargeFreq = 1;
+    public float rechargeFreq = 1;
 
     public float timeBetweenDamage = 0.5f;
 
@@ -36,7 +36,7 @@ public class Stats : MonoBehaviour
         get => armor;
         set
         {
-            if (armor != value && value >= maxArmor && isPlayer)
+            if (armor != maxArmor && value >= maxArmor && isPlayer)
             {
                 armor = maxArmor;
                 barAnimator.SetBool("isArmorCharged", true);

@@ -3,16 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DaggerBladeAI : MonoBehaviour
+public class DaggerBladeAI : Enemy
 {
-    /// <summary>
-    /// Координаты игрока
-    /// </summary>
-    public Transform playerTransform;
-    /// <summary>
-    /// Статы игрока
-    /// </summary>
-    public Stats playerStats;
     /// <summary>
     /// Слой, на котором находится игрок
     /// </summary>
@@ -27,10 +19,6 @@ public class DaggerBladeAI : MonoBehaviour
     /// Радиус, в котором наносится урон
     /// </summary>
     public float damageRange;
-    /// <summary>
-    /// Урон, наносимый при атаке
-    /// </summary>
-    public int damage;
     /// <summary>
     /// Сдвиг по Y радиуса, в котором может быть нанесен урон
     /// </summary>
@@ -66,14 +54,8 @@ public class DaggerBladeAI : MonoBehaviour
     /// </summary>
     private float timeAfterJump;
 
-    private Rigidbody2D rb;
     private bool isRunning;
     private bool isInAttackRange;
-    private Transform anchor;
-    private Rect roomRect;
-    private Vector2 movement;
-    private Vector3 direction;
-    private Stats selfStats;
 
     private Vector2 jumpSpot;
     private Vector2 playerSpot;
@@ -199,22 +181,28 @@ public class DaggerBladeAI : MonoBehaviour
             rb.velocity = Vector3.zero;
         }
     }
-    public void DealDamage()
+    public override void DealDamage()
     {
-        Collider2D playerCollider = Physics2D.OverlapCircle(transform.position - new Vector3(0, offsetY, 0), damageRange, playerLayer);
-        if (playerCollider != null)
+        Collider2D[] playerCollider = Physics2D.OverlapCircleAll(transform.position - new Vector3(0, offsetY, 0), damageRange, playerLayer);
+        for (int i = 0; i < playerCollider.Length; i++)
         {
-            if (Random.Range(1, 100) <= selfStats.critChance)
+            if (playerCollider[i] != null)
             {
-                playerCollider.GetComponent<Stats>().TakeDamage((int)(damage * (1 + selfStats.critMultiplier / 100f)));
-            }
-            else
-            {
-                playerCollider.GetComponent<Stats>().TakeDamage(damage);
+                if (playerCollider[i].CompareTag("Player") || playerCollider[i].CompareTag("Box"))
+                {
+                    if (Random.Range(1, 100) <= selfStats.critChance)
+                    {
+                        playerCollider[i].GetComponent<Stats>().TakeDamage((int)(damage * (1 + selfStats.critMultiplier / 100f)));
+                    }
+                    else
+                    {
+                        playerCollider[i].GetComponent<Stats>().TakeDamage(damage);
+                    }
+                }
             }
         }
     }
-    public void MoveCharacter(Vector2 movement)
+    public override void MoveCharacter(Vector2 movement)
     {
         rb.velocity = movement * speed;
     }

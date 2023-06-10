@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
@@ -135,7 +136,7 @@ public class Gun : MonoBehaviour
         Collider2D[] enemies = Physics2D.OverlapCircleAll(shotPoint.position, attackRange, enemyLayer);
         for (int i = 0; i < enemies.Length; i++)
         {
-            if (enemies[i].CompareTag("Enemy"))
+            if (enemies[i].CompareTag("Enemy") || enemies[i].CompareTag("Box"))
             {
                 if (UnityEngine.Random.Range(1, 100) <= playerStats.critChance)
                 {

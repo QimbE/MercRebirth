@@ -28,5 +28,14 @@ public class Movement : MonoBehaviour
             targetVelocity /= 1.414f;
         }
         rigidBody.velocity = targetVelocity * friction;
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        if (difference.x<0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 }

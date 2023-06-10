@@ -255,6 +255,11 @@ public class RoomSpawner : MonoBehaviour
         }
     }
 
+    //void SetLayout()
+    //{
+
+    //}
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (!isSpawned && other.CompareTag("RoomPoint") && other.GetComponent<RoomSpawner>().isSpawned)

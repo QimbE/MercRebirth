@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     float verticalMove = 0f;
     public float speed = 1f;
     public float friction = 0.7f;
+    public Animator anim;
 
     void Start()
     {
@@ -22,6 +23,14 @@ public class Movement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (horizontalMove==0 && verticalMove==0)
+        {
+            anim.SetBool("isRunning", false);
+        }
+        else
+        {
+            anim.SetBool("isRunning", true);
+        }
         Vector2 targetVelocity = new Vector2(horizontalMove+ rigidBody.velocity.x, rigidBody.velocity.y+ verticalMove);
         if (targetVelocity.magnitude > speed)
         {
@@ -29,13 +38,13 @@ public class Movement : MonoBehaviour
         }
         rigidBody.velocity = targetVelocity * friction;
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        if (difference.x<0)
+        if (difference.x < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-1.5f, 1.5f, 1.5f);
         }
         else
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
     }
 }

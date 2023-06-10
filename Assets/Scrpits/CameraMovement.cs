@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour
     public float scale=-10;
     void Start()
     {
-        player = GameObject.Find("Dude").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     void Update()
     {

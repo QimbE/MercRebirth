@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Wall
-  - RoomPoint
-  - Rooms
-  - RoomPresets
+  - SpawnPoint
+  - Gun
+  - Melee
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -15,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Enemies and walls
   - 
   - 
   - 

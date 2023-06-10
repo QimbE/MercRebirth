@@ -87,8 +87,6 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - shotPoint.position;
-        float rotZ = Mathf.Atan2(difference.y, difference.x)*Mathf.Rad2Deg;
         if (timeBtwShots <= 0)
         {
             if (Input.GetMouseButton(0))
@@ -103,6 +101,8 @@ public class Gun : MonoBehaviour
                 }
                 else
                 {
+                    Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - shotPoint.position;
+                    float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
                     Instantiate(bullet, shotPoint.position, Quaternion.Euler(0f, 0f, rotZ + offset));
                     GetComponent<Animator>().SetBool("isShot", true);
                 }

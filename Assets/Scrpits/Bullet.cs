@@ -15,17 +15,27 @@ public class Bullet : MonoBehaviour
     private float start;
 
     public Stats playerStats;
+    public bool isEnemies = false;
 
+    private string hitTag;
     private void OnEnable()
     {
         start = Time.time;
+        if (isEnemies)
+        {
+            hitTag = "Player";
+        }
+        else
+        {
+            hitTag = "Enemy";
+        }
     }
     void Update()
     {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
         if (hitInfo.collider != null)
         {
-            if (hitInfo.collider.CompareTag("Enemy"))
+            if (hitInfo.collider.CompareTag(hitTag))
             {
                 if (Random.Range(1, 100) <= playerStats.critChance)
                 {

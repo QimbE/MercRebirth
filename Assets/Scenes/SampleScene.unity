@@ -2208,6 +2208,8 @@ MonoBehaviour:
   energy: 100
   maxEnergy: 100
   energyRechargePerSec: 8
+  armorIncrease: 2
+  timeBetweenArmorRegen: 15
   timeBetweenDamage: 0.3
   critChance: 55
   critMultiplier: 20
@@ -2272,7 +2274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559371619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.004, y: 0.024, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2301,11 +2303,14 @@ MonoBehaviour:
   ultCost: 100
   ultKey: 113
   gun: {fileID: 1543943406}
-  melee: {fileID: 0}
-  playerAnim: {fileID: 0}
-  meleeAnim: {fileID: 0}
+  melee: {fileID: 505015199}
+  ultRadius: 1.71
+  rotationSpeed: 7
+  playerAnim: {fileID: 1559371620}
+  meleeAnim: {fileID: 505015200}
   ultTime: 20
   coolDown: 10
+  timeBetweenDealDamage: 0.3
   isUltActive: 0
 --- !u!1 &1595112352
 GameObject:

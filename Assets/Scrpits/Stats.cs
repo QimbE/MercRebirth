@@ -16,6 +16,8 @@ public class Stats : MonoBehaviour
     public int energy;
     public int maxEnergy;
     public int energyRechargePerSec;
+    public int armorIncrease;
+    public float timeBetweenArmorRegen = 15f;
     internal float rechargeFreq = 1;
 
     public float timeBetweenDamage = 0.5f;
@@ -27,6 +29,7 @@ public class Stats : MonoBehaviour
 
     private float currentTimeBetweenRecharge = 0;
     private float currentTimeBetweenDamage = 0;
+    private float currentTimeBetweenArmorRegen = 0;
     
     public int Armor
     {
@@ -107,7 +110,7 @@ public class Stats : MonoBehaviour
     void Update()
     {
         EnergyCharging();
-
+        ArmorRegen();
         if (Health <= 0)
         {
             if (!isPlayer)
@@ -119,7 +122,7 @@ public class Stats : MonoBehaviour
                 //on player death
             }
         }
-
+        currentTimeBetweenArmorRegen += Time.deltaTime;
         currentTimeBetweenDamage += Time.deltaTime;
     }
     public void TakeDamage(int damage)
@@ -133,6 +136,15 @@ public class Stats : MonoBehaviour
                 Armor = 0;
             }
             currentTimeBetweenDamage = 0;
+            currentTimeBetweenArmorRegen = 0;
+        }
+    }
+    public void ArmorRegen()
+    {
+        if (currentTimeBetweenArmorRegen>=timeBetweenArmorRegen)
+        {
+            Armor += armorIncrease;
+            currentTimeBetweenArmorRegen = 0;
         }
     }
     public void EnergyCharging()

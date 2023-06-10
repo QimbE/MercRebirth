@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.18f1 (3129e69bc0c7) revision 3221990'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 8157 MB
+OS: 'Windows 10  (10.0.18363) 64bit Core' Language: 'ru' Physical Memory: 16332 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2021.3.18f1\Editor\Unity.exe
+D:\Ok\2021.3.18f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker5
 -projectPath
-D:/Course Project/Merc Rebirth 0.5
+D:/Лабы/Unity projects/Merc Rebirth
 -logFile
 Logs/AssetImportWorker5.log
 -srvPort
-62126
-Successfully changed project path to: D:/Course Project/Merc Rebirth 0.5
-D:/Course Project/Merc Rebirth 0.5
+51236
+Successfully changed project path to: D:/Лабы/Unity projects/Merc Rebirth
+D:/Лабы/Unity projects/Merc Rebirth
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,109 +47,109 @@ D:/Course Project/Merc Rebirth 0.5
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [6168] Host "[IP] 192.168.1.69 [Port] 0 [Flags] 2 [Guid] 2828039880 [EditorId] 2828039880 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-HS2KJMA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [19120] Host "[IP] 192.168.1.3 [Port] 0 [Flags] 2 [Guid] 64667919 [EditorId] 64667919 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-T085SOG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [6168] Host "[IP] 192.168.1.69 [Port] 0 [Flags] 2 [Guid] 2828039880 [EditorId] 2828039880 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-HS2KJMA) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [19120] Host "[IP] 192.168.1.3 [Port] 0 [Flags] 2 [Guid] 64667919 [EditorId] 64667919 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-T085SOG) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 352.04 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 117.53 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.18f1 (3129e69bc0c7)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Course Project/Merc Rebirth 0.5/Assets
+[Subsystems] Discovering subsystems at path D:/Ok/2021.3.18f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Лабы/Unity projects/Merc Rebirth/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c82)
+    Renderer: NVIDIA GeForce RTX 2060 SUPER (ID=0x1f06)
     Vendor:   NVIDIA
-    VRAM:     4017 MB
-    Driver:   31.0.15.3141
+    VRAM:     8019 MB
+    Driver:   31.0.15.2849
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56384
+Mono path[0] = 'D:/Ok/2021.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Ok/2021.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Ok/2021.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56304
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.012855 seconds.
+Register platform support module: D:/Ok/2021.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002301 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 187.05 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 106.01 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.791 seconds
+- Completed reload, in  0.682 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1792ms)
-		BeginReloadAssembly (322ms)
+	ReloadAssembly (682ms)
+		BeginReloadAssembly (97ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (1159ms)
-			LoadAssemblies (317ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (478ms)
+			LoadAssemblies (97ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (313ms)
+			SetupTypeCache (108ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (53ms)
-			SetupLoadedEditorAssemblies (691ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (291ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (187ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (343ms)
-				ProcessInitializeOnLoadMethodAttributes (144ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (106ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (129ms)
+				ProcessInitializeOnLoadMethodAttributes (48ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.014271 seconds.
+Registered in 0.012567 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Course Project\Merc Rebirth 0.5\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Course Project\Merc Rebirth 0.5\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\Лабы\Unity projects\Merc Rebirth\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Лабы\Unity projects\Merc Rebirth\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 116.49 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 105.11 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.747 seconds
+- Completed reload, in  1.287 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1752ms)
-		BeginReloadAssembly (183ms)
+	ReloadAssembly (1288ms)
+		BeginReloadAssembly (130ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (26ms)
-		EndReloadAssembly (1396ms)
-			LoadAssemblies (133ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (1035ms)
+			LoadAssemblies (113ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (370ms)
+			SetupTypeCache (270ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (86ms)
-			SetupLoadedEditorAssemblies (719ms)
+			RebuildScriptCaches (84ms)
+			SetupLoadedEditorAssemblies (527ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (117ms)
-				BeforeProcessingInitializeOnLoad (120ms)
-				ProcessInitializeOnLoadAttributes (345ms)
-				ProcessInitializeOnLoadMethodAttributes (116ms)
-				AfterProcessingInitializeOnLoad (14ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (105ms)
+				BeforeProcessingInitializeOnLoad (98ms)
+				ProcessInitializeOnLoadAttributes (276ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 1.12 ms, found 6 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.80 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3926 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 70 unused Assets / (275.2 KB). Loaded Objects now: 4424.
-Memory consumption went from 162.2 MB to 161.9 MB.
-Total: 4.326300 ms (FindLiveObjects: 0.324800 ms CreateObjectMapping: 0.348700 ms MarkObjects: 3.481600 ms  DeleteObjects: 0.170000 ms)
+Unloading 3931 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 70 unused Assets / (275.7 KB). Loaded Objects now: 4433.
+Memory consumption went from 169.3 MB to 169.0 MB.
+Total: 3.631200 ms (FindLiveObjects: 0.337100 ms CreateObjectMapping: 0.108100 ms MarkObjects: 2.985600 ms  DeleteObjects: 0.199400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -162,50 +162,230 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+Received Import Request.
+  Time since last request: 7592.443607 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/B Room Preset.prefab
+  artifactKey: Guid(b19c30e3e946a56458ddae2df444c79d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/B Room Preset.prefab using Guid(b19c30e3e946a56458ddae2df444c79d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2001594d55c430e3fff5f56d878cd0ef') in 0.166607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/TRL Room Preset.prefab
+  artifactKey: Guid(58681955f64e83242ac9aa69abed52f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/TRL Room Preset.prefab using Guid(58681955f64e83242ac9aa69abed52f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a3c71775eb19876e3244db5e3338e19') in 0.032734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/TR Room Preset.prefab
+  artifactKey: Guid(2737920d177cd104eafa15ffbf26f5f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/TR Room Preset.prefab using Guid(2737920d177cd104eafa15ffbf26f5f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34ffa749e54ee692851f995943a5c8bf') in 0.032480 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/TBL Room Preset.prefab
+  artifactKey: Guid(3cd15652855d71148b2dd1bebcef76de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/TBL Room Preset.prefab using Guid(3cd15652855d71148b2dd1bebcef76de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7b53eac51da656c619f20ea7fcd3c46') in 0.025743 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/RB Room Preset.prefab
+  artifactKey: Guid(c9d246dff2829244dba8690f8cb0471a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/RB Room Preset.prefab using Guid(c9d246dff2829244dba8690f8cb0471a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a9256eea1f7b4c87cccdc41f0c69f81') in 0.022950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/TB Room Preset.prefab
+  artifactKey: Guid(6aba348c786c8ed49a683fe7b6b54b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/TB Room Preset.prefab using Guid(6aba348c786c8ed49a683fe7b6b54b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '563d9aaa3fe3c75a13baba5c7d5a0b43') in 0.025068 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/BL Room Preset.prefab
+  artifactKey: Guid(e40458da1745475409365fcb259b0d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/BL Room Preset.prefab using Guid(e40458da1745475409365fcb259b0d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d005ed401bde2725df7ad5b472bb2fd') in 0.024795 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/L Room Preset.prefab
+  artifactKey: Guid(409621b416c95a342a0878e87db422e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/L Room Preset.prefab using Guid(409621b416c95a342a0878e87db422e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74d05e3f8f0f50b96d0fc50c37881d82') in 0.027191 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.580357 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/BL Room Preset.prefab
+  artifactKey: Guid(e40458da1745475409365fcb259b0d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/BL Room Preset.prefab using Guid(e40458da1745475409365fcb259b0d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94243007286c2d5f7c164f4261deb2c6') in 0.249213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/RBL Room Preset.prefab
+  artifactKey: Guid(a11131d619b297d4abefe8c99b4bdf6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/RBL Room Preset.prefab using Guid(a11131d619b297d4abefe8c99b4bdf6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '254c812c49d714ac37391c77e8b8ae1b') in 0.030551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/TBL Room Preset.prefab
+  artifactKey: Guid(3cd15652855d71148b2dd1bebcef76de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/TBL Room Preset.prefab using Guid(3cd15652855d71148b2dd1bebcef76de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a491a5d6634be53ddb2ebbb7fe7c52f') in 0.027945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/TB Room Preset.prefab
+  artifactKey: Guid(6aba348c786c8ed49a683fe7b6b54b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/20x20 Circle/TB Room Preset.prefab using Guid(6aba348c786c8ed49a683fe7b6b54b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdb3f7eba02ff65719e045cf4ee2c113') in 0.024781 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.806635 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/L Room Preset.prefab
+  artifactKey: Guid(be5f660b75e593c4b99741ca387af9f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/L Room Preset.prefab using Guid(be5f660b75e593c4b99741ca387af9f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f890c2daf6abf1f12b5f3738be8d4085') in 0.023541 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TRBL Room Preset.prefab
+  artifactKey: Guid(529d0688541235548a7c429f07f503ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TRBL Room Preset.prefab using Guid(529d0688541235548a7c429f07f503ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b92afc1924aed96a1cfca0605b23000') in 0.031886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TB Room Preset.prefab
+  artifactKey: Guid(e625e352dcad20e48bab94a659f07367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TB Room Preset.prefab using Guid(e625e352dcad20e48bab94a659f07367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f10dd92c21e52eb89f41ca4dc565cce') in 0.026982 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.252913 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/BL Room Preset.prefab
+  artifactKey: Guid(faa939e9bd2ebcb4fac04895b5839bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/BL Room Preset.prefab using Guid(faa939e9bd2ebcb4fac04895b5839bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5edaeadd6fe7df4852217753082266a5') in 0.041605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TR Room Preset.prefab
+  artifactKey: Guid(275bc7a90de3e1843b1c99912b5b21d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TR Room Preset.prefab using Guid(275bc7a90de3e1843b1c99912b5b21d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6c2cfe027cc5c5035ea028e9bf411fb') in 0.029558 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TB Room Preset.prefab
+  artifactKey: Guid(e625e352dcad20e48bab94a659f07367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TB Room Preset.prefab using Guid(e625e352dcad20e48bab94a659f07367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52485b6a7e2f2744466d1869ba4f1d4e') in 0.025078 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/RBL Room Preset.prefab
+  artifactKey: Guid(96ef236bbac61e94698c1cf449059737) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/RBL Room Preset.prefab using Guid(96ef236bbac61e94698c1cf449059737) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca107d0a36a107924de6f5c8249e234a') in 0.034352 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.625477 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/BL Room Preset.prefab
+  artifactKey: Guid(faa939e9bd2ebcb4fac04895b5839bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/BL Room Preset.prefab using Guid(faa939e9bd2ebcb4fac04895b5839bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9f5e27fe10dd70e460b9164d9b9d61a') in 0.236857 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/RL Room Preset.prefab
+  artifactKey: Guid(bbc241330bad09049b39f6fd9eabc689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/RL Room Preset.prefab using Guid(bbc241330bad09049b39f6fd9eabc689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f15ac62ac1b41a6b3846eb70270fddf1') in 0.028632 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TB Room Preset.prefab
+  artifactKey: Guid(e625e352dcad20e48bab94a659f07367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TB Room Preset.prefab using Guid(e625e352dcad20e48bab94a659f07367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '590aefe34eb27e24ab1a0cd58d72b308') in 0.023609 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/RBL Room Preset.prefab
+  artifactKey: Guid(96ef236bbac61e94698c1cf449059737) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/RBL Room Preset.prefab using Guid(96ef236bbac61e94698c1cf449059737) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55a0793ced9f68b957aca007106372b4') in 0.029265 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.381788 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/BL Room Preset.prefab
+  artifactKey: Guid(faa939e9bd2ebcb4fac04895b5839bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/BL Room Preset.prefab using Guid(faa939e9bd2ebcb4fac04895b5839bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cd0326de9aa1ac8bcb484b1e6ab786c') in 0.219267 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TR Room Preset.prefab
+  artifactKey: Guid(275bc7a90de3e1843b1c99912b5b21d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TR Room Preset.prefab using Guid(275bc7a90de3e1843b1c99912b5b21d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9e9bbcf526f376703cf4e1b8c0efb9f') in 0.028357 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/R Room Preset.prefab
+  artifactKey: Guid(9c5264ce3362bc04fb1cd736c62abb8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/R Room Preset.prefab using Guid(9c5264ce3362bc04fb1cd736c62abb8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30d46243343f990e899ebae2ba8d0447') in 0.035329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/RB Room Preset.prefab
+  artifactKey: Guid(e0a25a7377abb3a4ba1ddd69bc769680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/RB Room Preset.prefab using Guid(e0a25a7377abb3a4ba1ddd69bc769680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10a906caf04e8c4ea9f5235da50b84b7') in 0.026339 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.298648 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/BL Room Preset.prefab
+  artifactKey: Guid(faa939e9bd2ebcb4fac04895b5839bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/BL Room Preset.prefab using Guid(faa939e9bd2ebcb4fac04895b5839bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbd0e220752f3ea045d530e0b1e0d5f3') in 0.099640 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TR Room Preset.prefab
+  artifactKey: Guid(275bc7a90de3e1843b1c99912b5b21d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TR Room Preset.prefab using Guid(275bc7a90de3e1843b1c99912b5b21d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ada8676ebad9895d6d7d212229f7362') in 0.030821 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TBL Room Preset.prefab
+  artifactKey: Guid(d96b829d3d5bf974c8b0ff4122c9b158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RoomGeneration/Room Presets/Ice Rooms/17x17 Box/TBL Room Preset.prefab using Guid(d96b829d3d5bf974c8b0ff4122c9b158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '789e6938496ba6e2b10ad9551426e5d9') in 0.026136 seconds 
+========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.021172 seconds.
+Registered in 0.013656 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Course Project\Merc Rebirth 0.5\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Course Project\Merc Rebirth 0.5\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\Лабы\Unity projects\Merc Rebirth\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Лабы\Unity projects\Merc Rebirth\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 3.33 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 1.44 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.589 seconds
+- Completed reload, in  1.389 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3591ms)
-		BeginReloadAssembly (489ms)
+	ReloadAssembly (1390ms)
+		BeginReloadAssembly (231ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (40ms)
+			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (116ms)
-		EndReloadAssembly (2872ms)
-			LoadAssemblies (195ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (1020ms)
+			LoadAssemblies (160ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (459ms)
-			ReleaseScriptCaches (5ms)
-			RebuildScriptCaches (186ms)
-			SetupLoadedEditorAssemblies (1715ms)
+			SetupTypeCache (335ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (438ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (70ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (333ms)
-				ProcessInitializeOnLoadAttributes (1070ms)
-				ProcessInitializeOnLoadMethodAttributes (197ms)
-				AfterProcessingInitializeOnLoad (39ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (85ms)
+				ProcessInitializeOnLoadAttributes (291ms)
+				ProcessInitializeOnLoadMethodAttributes (42ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (31ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 5.84 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 3.95 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3921 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 46 unused Assets / (267.6 KB). Loaded Objects now: 4439.
-Memory consumption went from 162.0 MB to 161.7 MB.
-Total: 5.864500 ms (FindLiveObjects: 0.297600 ms CreateObjectMapping: 0.665000 ms MarkObjects: 4.360000 ms  DeleteObjects: 0.541000 ms)
+Unloading 3926 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (268.7 KB). Loaded Objects now: 4456.
+Memory consumption went from 181.8 MB to 181.6 MB.
+Total: 4.495700 ms (FindLiveObjects: 0.414400 ms CreateObjectMapping: 0.104700 ms MarkObjects: 3.796600 ms  DeleteObjects: 0.179000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 

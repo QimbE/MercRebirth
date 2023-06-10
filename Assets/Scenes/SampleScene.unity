@@ -1283,7 +1283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682483743}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1100001, y: 0.19999981, z: 0}
+  m_LocalPosition: {x: 2.69, y: 0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1893,6 +1893,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120274916}
   m_CullTransparentMesh: 1
+--- !u!1 &1188381235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4433711699825786245, guid: 619ac938f2a9e7448ab099827497aa3c, type: 3}
+  m_PrefabInstance: {fileID: 536648390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1188381243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188381235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 226ddb3ad644f5f44843cd1173d6ab81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topRightRooms:
+  - {fileID: 1603044788172671839, guid: 9cfa2bddf11238c4fade0e576ae0eba3, type: 3}
+  - {fileID: 1603044788172671839, guid: 56a4d988258e38644a43be33765c1b8e, type: 3}
+  - {fileID: 1603044788172671839, guid: 98e7a2f68d1532c43a5bb2dc1b9aa66a, type: 3}
+  - {fileID: 1603044788172671839, guid: 4ded818f73c639145ab762301dcdc600, type: 3}
+  topLeftRooms:
+  - {fileID: 1603044788172671839, guid: 3965534cc68b0044ab24873d037a8838, type: 3}
+  - {fileID: 1603044788172671839, guid: 72512897c437b4f439c053c78a77e06d, type: 3}
+  - {fileID: 1603044788172671839, guid: 98e7a2f68d1532c43a5bb2dc1b9aa66a, type: 3}
+  - {fileID: 1603044788172671839, guid: 4ded818f73c639145ab762301dcdc600, type: 3}
+  bottomRightRooms:
+  - {fileID: 1603044788172671839, guid: 1f9d5764203f15945893061c66f60e4a, type: 3}
+  - {fileID: 1603044788172671839, guid: 0cc6ebdb4a1b3ad45a259f4a6d81f2d6, type: 3}
+  - {fileID: 1603044788172671839, guid: 56a4d988258e38644a43be33765c1b8e, type: 3}
+  - {fileID: 1603044788172671839, guid: 98e7a2f68d1532c43a5bb2dc1b9aa66a, type: 3}
+  bottomLeftRooms:
+  - {fileID: 1603044788172671839, guid: 43ecfdf1dcea6ba4f9bec8f0d3b9d2be, type: 3}
+  - {fileID: 1603044788172671839, guid: 0cc6ebdb4a1b3ad45a259f4a6d81f2d6, type: 3}
+  - {fileID: 1603044788172671839, guid: 3965534cc68b0044ab24873d037a8838, type: 3}
+  - {fileID: 1603044788172671839, guid: 98e7a2f68d1532c43a5bb2dc1b9aa66a, type: 3}
+  topBottomRooms:
+  - {fileID: 1603044788172671839, guid: bc0430a2a7e482c42be2568cba88b141, type: 3}
+  - {fileID: 1603044788172671839, guid: 3965534cc68b0044ab24873d037a8838, type: 3}
+  - {fileID: 1603044788172671839, guid: 56a4d988258e38644a43be33765c1b8e, type: 3}
+  - {fileID: 1603044788172671839, guid: 98e7a2f68d1532c43a5bb2dc1b9aa66a, type: 3}
+  rightLeftRooms:
+  - {fileID: 1603044788172671839, guid: 0cc6ebdb4a1b3ad45a259f4a6d81f2d6, type: 3}
+  - {fileID: 1603044788172671839, guid: 5c9adf6f1c208f84483ebb5ff6e580a3, type: 3}
+  - {fileID: 1603044788172671839, guid: 98e7a2f68d1532c43a5bb2dc1b9aa66a, type: 3}
+  - {fileID: 1603044788172671839, guid: 4ded818f73c639145ab762301dcdc600, type: 3}
 --- !u!1 &1197002513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2528,7 +2575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcd5769292e42046af7754fa3c3b761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 0
+  direction: 10
 --- !u!1 &1793001510
 GameObject:
   m_ObjectHideFlags: 0

@@ -58,13 +58,16 @@ public class Melee : MonoBehaviour
         Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemyLayer);
         for (int i = 0; i < enemies.Length; i++)
         {
-            if (Random.Range(1,100)<=playerStats.critChance)
+            if (enemies[i].CompareTag("Enemy"))
             {
-                enemies[i].GetComponent<Stats>().TakeDamage((int)(damage*(1+playerStats.critMultiplier/100f)));
-            }
-            else
-            {
-                enemies[i].GetComponent<Stats>().TakeDamage(damage);
+                if (Random.Range(1, 100) <= playerStats.critChance)
+                {
+                    enemies[i].GetComponent<Stats>().TakeDamage((int)(damage * (1 + playerStats.critMultiplier / 100f)));
+                }
+                else
+                {
+                    enemies[i].GetComponent<Stats>().TakeDamage(damage);
+                }
             }
         }
     }

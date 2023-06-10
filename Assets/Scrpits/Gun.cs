@@ -1,20 +1,77 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    /// <summary>
+    /// Смещение, если спрайт пушки повернут под интересным углом
+    /// </summary>
     public float offset = 0;
+    /// <summary>
+    /// Объект, которым будет стрелять пушка
+    /// </summary>
     public GameObject bullet;
+    /// <summary>
+    /// Точка, из которой будут вылетать пули
+    /// </summary>
     public Transform shotPoint;
+    /// <summary>
+    /// Текущее время между выстрелами
+    /// </summary>
     private float timeBtwShots;
+    /// <summary>
+    /// Время после последнего выстрела, через которое можно снова стрелять
+    /// </summary>
     public float startTimeBtwShots;
 
+    /// <summary>
+    /// Примерный радиус игрока, при клике мышкой в этом радиусе игрок ударяет прикладом
+    /// </summary>
+    public float playerRadius;
+    /// <summary>
+    /// Смещение зоны, при нажатии на которую будет произведен удар прикладом
+    /// </summary>
+    public float meleeZoneShiftY;
+    /// <summary>
+    /// Координаты игрока
+    /// </summary>
+    public Transform playerTransform;
+    /// <summary>
+    /// Урон, наносимый ударом приклада
+    /// </summary>
+    public int meleeDamage;
+    /// <summary>
+    /// Радиус атаки прикладом, относительно shotPoint
+    /// </summary>
+    public float attackRange;
+    /// <summary>
+    /// Слой с врагами
+    /// </summary>
+    public LayerMask enemyLayer;
+
+    /// <summary>
+    /// Характеристики персонажа
+    /// </summary>
     public Stats playerStats;
 
+    /// <summary>
+    /// Скорость полета пули
+    /// </summary>
     public float bulletSpeed;
+    /// <summary>
+    /// Время жизни пули в секундах. По истечении срока, объект пули будет удалён со сцены.
+    /// </summary>
     public float bulletLifeTime;
+    /// <summary>
+    /// Длина отрезка перед пулей, внутри которого проверяются столкновения
+    /// </summary>
     public float bulletDistance;
+    /// <summary>
+    /// Урон наносимый пулей
+    /// </summary>
     public int bulletDamage;
 
     private void OnEnable()
@@ -36,7 +93,18 @@ public class Gun : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
-                Instantiate(bullet, shotPoint.position, Quaternion.Euler(0f, 0f, rotZ + offset));
+                //Зануляем z, ведь это расстояние от "линзы" камеры
+                Vector3 tempMouseCord = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                tempMouseCord.z = 0;
+                Vector3 temp = tempMouseCord - (playerTransform.position - new Vector3(0,meleeZoneShiftY));
+                if (math.pow(temp.magnitude,2) <= math.pow(playerRadius,2))
+                {
+                    GetComponent<Animator>().SetBool("isStockAttack", true);
+                }
+                else
+                {
+                    Instantiate(bullet, shotPoint.position, Quaternion.Euler(0f, 0f, rotZ + offset));
+                }
                 timeBtwShots = startTimeBtwShots;
             }
         }
@@ -44,5 +112,34 @@ public class Gun : MonoBehaviour
         {
             timeBtwShots -= Time.deltaTime;
         }
+    }
+    public void StockAttackDealDamage()
+    {
+        Collider2D[] enemies = Physics2D.OverlapCircleAll(shotPoint.position, attackRange, enemyLayer);
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            if (enemies[i].CompareTag("Enemy"))
+            {
+                if (UnityEngine.Random.Range(1, 100) <= playerStats.critChance)
+                {
+                    enemies[i].GetComponent<Stats>().TakeDamage((int)(meleeDamage * (1 + playerStats.critMultiplier / 100f)));
+                }
+                else
+                {
+                    enemies[i].GetComponent<Stats>().TakeDamage(meleeDamage);
+                }
+            }
+        }
+    }
+    public void StopStockAttack()
+    {
+        GetComponent<Animator>().SetBool("isStockAttack", false);
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(playerTransform.position - new Vector3(0, meleeZoneShiftY), playerRadius);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(shotPoint.position , attackRange);
     }
 }

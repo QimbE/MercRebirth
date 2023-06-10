@@ -10,10 +10,12 @@ public class Movement : MonoBehaviour
     public float speed = 1f;
     public float friction = 0.7f;
     public Animator anim;
+    public Texture2D cursorTexture;
 
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        Cursor.SetCursor(cursorTexture, new Vector2(24,24), CursorMode.Auto);
     }
 
     void Update()

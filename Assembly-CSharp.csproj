@@ -56,8 +56,18 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scrpits\Melee.cs" />
+    <Compile Include="Assets\RoomGeneration\Scripts\RoomPresets.cs" />
+    <Compile Include="Assets\RoomGeneration\Scripts\SinglewayRooms.cs" />
+    <Compile Include="Assets\RoomGeneration\Scripts\Directions.cs" />
     <Compile Include="Assets\Scrpits\RoomSpawner.cs" />
     <Compile Include="Assets\Scrpits\Movement.cs" />
+    <Compile Include="Assets\Scrpits\DeafaultEnemyAI.cs" />
+    <Compile Include="Assets\Scrpits\BarSlider.cs" />
+    <Compile Include="Assets\Scrpits\WeaponSwap.cs" />
+    <Compile Include="Assets\RoomGeneration\Scripts\RoomSpawner.cs" />
+    <Compile Include="Assets\RoomGeneration\Scripts\MultiwayRooms.cs" />
+    <Compile Include="Assets\Scrpits\Stats.cs" />
     <Compile Include="Assets\Scrpits\CameraMovement.cs" />
     <Compile Include="Assets\Scrpits\PlayerCheto.cs" />
     <Compile Include="Assets\Scrpits\Bullet.cs" />

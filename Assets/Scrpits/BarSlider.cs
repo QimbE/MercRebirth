@@ -11,6 +11,9 @@ public class BarSlider : MonoBehaviour
     public Slider sliderArmor;
     public Text textArmor;
 
+    public Slider sliderEnergy;
+    public Text textEnergy;
+
     public Stats playerStats;
 
     public void SetMaxValue(ref Slider slider, ref Text textValue, int startValue)
@@ -30,12 +33,27 @@ public class BarSlider : MonoBehaviour
     {
         SetMaxValue(ref sliderHP, ref textHP, playerStats.maxHealth);
         SetMaxValue(ref sliderArmor, ref textArmor, playerStats.maxArmor);
+        SetMaxValue(ref sliderEnergy, ref textEnergy, playerStats.maxEnergy);
     }
 
     // Update is called once per frame
     void Update()
     {
-        SetValue(ref sliderHP, ref textHP, playerStats.maxHealth);
-        SetValue(ref sliderArmor, ref textArmor, playerStats.maxArmor);
+        SetValue(ref sliderHP, ref textHP, playerStats.health);
+        SetValue(ref sliderArmor, ref textArmor, playerStats.armor);
+        SetValue(ref sliderEnergy, ref textEnergy, playerStats.energy);
+    }
+
+    public void StopEnergyAnimation()
+    {
+        this.GetComponent<Animator>().SetBool("isEnergyCharged",false);
+    }
+    public void StopArmorAnimation()
+    {
+        this.GetComponent<Animator>().SetBool("isArmorCharged", false);
+    }
+    public void StopHpAnimation()
+    {
+        this.GetComponent<Animator>().SetBool("isHpCharged", false);
     }
 }

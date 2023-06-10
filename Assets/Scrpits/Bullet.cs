@@ -40,6 +40,7 @@ public class Bullet : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+            Destroy(gameObject);
         }
         transform.Translate(Vector2.right * speed * Time.deltaTime);
         //Bullet delete

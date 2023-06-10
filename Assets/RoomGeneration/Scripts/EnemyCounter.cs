@@ -11,5 +11,12 @@ public class EnemyCounter : MonoBehaviour
     {
         LayerMask mask = LayerMask.GetMask("Enemies");
         enemyCount = Physics2D.OverlapBoxAll(transform.position, boxSize, 0, mask).Length;
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            foreach (Collider2D col in Physics2D.OverlapBoxAll(transform.position, boxSize, 0, mask))
+            {
+                Destroy(col.gameObject);
+            }
+        }
     }
 }

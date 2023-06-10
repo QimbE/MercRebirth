@@ -16,6 +16,10 @@ TagManager:
   - Box
   - EnemyTypes
   - RoomLayouts
+  - SceneSpawner
+  - MainMenu
+  - ProgressionMenu
+  - Layout
   layers:
   - Default
   - TransparentFX
@@ -28,8 +32,8 @@ TagManager:
   - Walls
   - Boxes
   - EnemyTiles
-  - 
-  - 
+  - Doors
+  - Anchors
   - 
   - 
   - 

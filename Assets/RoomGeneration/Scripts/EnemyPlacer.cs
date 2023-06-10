@@ -3,8 +3,8 @@ using UnityEngine;
 public class EnemyPlacer : MonoBehaviour
 {
     GameObject[] enemies;
-
-    public int enemyCount = 25;
+    public Transform parent;
+    public int enemyCount = 5;
     int count = 0;
     int deletedCount = 0;
     System.Random random = new System.Random();
@@ -15,10 +15,20 @@ public class EnemyPlacer : MonoBehaviour
     Collider2D[] enemyTiles;
     Collider2D curr;
 
+    DoorActivator doorActivator;
+
     void Start()
     {
         enemies = GameObject.FindGameObjectWithTag("EnemyTypes").GetComponent<EnemyTypes>().enemies;
+        parent = GameObject.FindGameObjectWithTag("SceneSpawner").GetComponent<Transform>();
         mask = LayerMask.GetMask("EnemyTiles");
+        doorActivator = this.GetComponent<DoorActivator>();
+        Invoke("Costil", 2f);
+    }
+    public void Costil()
+    {
+        RoomSpawner.counter = 0;
+        //Debug.Log("Костыль работает!");
     }
 
     void Update()
@@ -37,13 +47,14 @@ public class EnemyPlacer : MonoBehaviour
             foreach (var tile in enemyTiles)
                 Destroy(tile.gameObject);
             deletedCount = -1;
+            doorActivator.StartSequence();
         }
     }
 
     void SpawnEnemy()
     {
         rnd = random.Next(0, enemies.Length);
-        Instantiate(enemies[rnd], curr.transform.position, enemies[rnd].transform.rotation);
+        Instantiate(enemies[rnd], curr.transform.position, enemies[rnd].transform.rotation, parent);
         Destroy(curr.gameObject);
         deletedCount++;
     }

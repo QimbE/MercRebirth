@@ -1,6 +1,8 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using static InstantUseItem;
 
 public class Stats : MonoBehaviour
@@ -30,7 +32,7 @@ public class Stats : MonoBehaviour
     private float currentTimeBetweenRecharge = 0;
     private float currentTimeBetweenDamage = 0;
     private float currentTimeBetweenArmorRegen = 0;
-    
+    public UnityEvent OnDeath;
     public int Armor
     {
         get => armor;
@@ -99,7 +101,7 @@ public class Stats : MonoBehaviour
             }
         }
     }
-    public void CopyStats(Stats newStats)
+    public void CopyStats(GameData newStats)
     {
         this.health = newStats.health;
         this.maxHealth = newStats.maxHealth;
@@ -119,9 +121,9 @@ public class Stats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("CostilFunc", 2f);
     }
-
+    public void CostilFunc() => rechargeFreq = 1;
     // Update is called once per frame
     void Update()
     {
@@ -131,15 +133,20 @@ public class Stats : MonoBehaviour
         {
             if (!isPlayer)
             {
+                OnDeathActivation();
                 Destroy(gameObject);
             }
             else
             {
-                //on player death
+                OnDeathActivation();
             }
         }
         currentTimeBetweenArmorRegen += Time.deltaTime;
         currentTimeBetweenDamage += Time.deltaTime;
+    }
+    public void OnDeathActivation()
+    {
+        OnDeath?.Invoke();
     }
     public void TakeDamage(int damage)
     {
@@ -172,14 +179,6 @@ public class Stats : MonoBehaviour
                 Energy += energyRechargePerSec;
                 currentTimeBetweenRecharge = 0;
             }
-        }
-        else if (isPlayer)
-        {
-            //Press Q to activate ur ultimate skill
-        }
-        else
-        {
-            //Enemy activates smth
         }
         currentTimeBetweenRecharge += Time.deltaTime;
     }

@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
@@ -74,6 +73,7 @@ public class Gun : MonoBehaviour
     /// Урон наносимый пулей
     /// </summary>
     public int bulletDamage;
+    public Transform parent;
 
     private void OnEnable()
     {
@@ -83,6 +83,7 @@ public class Gun : MonoBehaviour
         temp.distance = bulletDistance;
         temp.damage = bulletDamage;
         temp.playerStats = playerStats;
+        parent = GameObject.FindGameObjectWithTag("SceneSpawner").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -104,7 +105,7 @@ public class Gun : MonoBehaviour
                 {
                     Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - shotPoint.position;
                     float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-                    Instantiate(bullet, shotPoint.position, Quaternion.Euler(0f, 0f, rotZ + offset));
+                    Instantiate(bullet, shotPoint.position, Quaternion.Euler(0f, 0f, rotZ + offset), parent);
                     GetComponent<Animator>().SetBool("isShot", true);
                 }
                 timeBtwShots = startTimeBtwShots;

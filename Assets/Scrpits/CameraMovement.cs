@@ -13,6 +13,10 @@ public class CameraMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         transform.position+= (new Vector3(player.position.x, player.position.y, scale) - transform.position)*Time.deltaTime*3f;
     }
 }

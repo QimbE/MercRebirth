@@ -31,9 +31,8 @@ public class BarSlider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetMaxValue(ref sliderHP, ref textHP, playerStats.maxHealth);
-        SetMaxValue(ref sliderArmor, ref textArmor, playerStats.maxArmor);
-        SetMaxValue(ref sliderEnergy, ref textEnergy, playerStats.maxEnergy);
+        UpdateAllMax();
+        Invoke("UpdateAllMax", 2f);
     }
 
     // Update is called once per frame
@@ -55,5 +54,11 @@ public class BarSlider : MonoBehaviour
     public void StopHpAnimation()
     {
         this.GetComponent<Animator>().SetBool("isHpCharged", false);
+    }
+    public void UpdateAllMax()
+    {
+        SetMaxValue(ref sliderHP, ref textHP, playerStats.maxHealth);
+        SetMaxValue(ref sliderArmor, ref textArmor, playerStats.maxArmor);
+        SetMaxValue(ref sliderEnergy, ref textEnergy, playerStats.maxEnergy);
     }
 }

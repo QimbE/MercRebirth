@@ -3,7 +3,8 @@ using UnityEngine;
 public class RoomSpawner : MonoBehaviour
 {
     public Direction direction;
-    public static int maxCounter = 5;
+    public static int maxCounter = 3;
+    public Transform parent;
     public enum Direction
     {
         Top,
@@ -27,13 +28,14 @@ public class RoomSpawner : MonoBehaviour
     private int rand;
     private bool isSpawned = false;
     private float waitTime = 3f;
-    private static int counter = 0;
+    //private int counter = 0;
+    internal static int counter = 0;
     private bool isTopFree = true;
     private bool isRightFree = true;
     private bool isBottomFree = true;
     private bool isLeftFree = true;
 
-    private void Start()
+    public void Start()
     {
         if (Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y + 32f), 3f) is not null)
             isTopFree = false;
@@ -43,12 +45,18 @@ public class RoomSpawner : MonoBehaviour
             isBottomFree = false;
         if (Physics2D.OverlapCircle(new Vector2(transform.position.x - 32f, transform.position.y), 3f) is not null)
             isLeftFree = false;
+        parent = GameObject.FindGameObjectWithTag("SceneSpawner").GetComponent<Transform>();
+        
     }
 
     private void Update()
     {
         roomPresets = GameObject.FindGameObjectWithTag("RoomPresets").GetComponent<RoomPresets>();
         roomLayouts = GameObject.FindGameObjectWithTag("RoomLayouts").GetComponent<RoomLayouts>();
+        if (parent == null)
+        {
+            parent = GameObject.FindGameObjectWithTag("SceneSpawner").GetComponent<Transform>();
+        }
         if (counter==0 || counter>=maxCounter)
         {
             singlewayRooms = GameObject.FindGameObjectWithTag("Rooms").GetComponent<SinglewayRooms>();
@@ -68,7 +76,7 @@ public class RoomSpawner : MonoBehaviour
     public void SetRoomFromArray(GameObject[] arr)
     {
         rand = Random.Range(0, arr.Length);
-        Instantiate(arr[rand], transform.position, arr[rand].transform.rotation);
+        Instantiate(arr[rand], transform.position, arr[rand].transform.rotation, parent);
         SetRoomPreset(arr[rand]);
     }
 
@@ -182,35 +190,35 @@ public class RoomSpawner : MonoBehaviour
 
         int chk = Random.Range(0, 2);
         if (objName == "T")
-            Instantiate(roomPresets.Ts[chk], transform.position, roomPresets.Ts[chk].transform.rotation);
+            Instantiate(roomPresets.Ts[chk], transform.position, roomPresets.Ts[chk].transform.rotation, parent);
         else if (objName == "R")
-            Instantiate(roomPresets.Rs[chk], transform.position, roomPresets.Rs[chk].transform.rotation);
+            Instantiate(roomPresets.Rs[chk], transform.position, roomPresets.Rs[chk].transform.rotation, parent);
         else if (objName == "B")
-            Instantiate(roomPresets.Bs[chk], transform.position, roomPresets.Bs[chk].transform.rotation);
+            Instantiate(roomPresets.Bs[chk], transform.position, roomPresets.Bs[chk].transform.rotation, parent);
         else if (objName == "L")
-            Instantiate(roomPresets.Ls[chk], transform.position, roomPresets.Ls[chk].transform.rotation);
+            Instantiate(roomPresets.Ls[chk], transform.position, roomPresets.Ls[chk].transform.rotation, parent);
         else if (objName == "TR")
-            Instantiate(roomPresets.TRs[chk], transform.position, roomPresets.TRs[chk].transform.rotation);
+            Instantiate(roomPresets.TRs[chk], transform.position, roomPresets.TRs[chk].transform.rotation, parent);
         else if (objName == "TB")
-            Instantiate(roomPresets.TBs[chk], transform.position, roomPresets.TBs[chk].transform.rotation);
+            Instantiate(roomPresets.TBs[chk], transform.position, roomPresets.TBs[chk].transform.rotation, parent);
         else if (objName == "TL")
-            Instantiate(roomPresets.TLs[chk], transform.position, roomPresets.TLs[chk].transform.rotation);
+            Instantiate(roomPresets.TLs[chk], transform.position, roomPresets.TLs[chk].transform.rotation, parent);
         else if (objName == "RB")
-            Instantiate(roomPresets.RBs[chk], transform.position, roomPresets.RBs[chk].transform.rotation);
+            Instantiate(roomPresets.RBs[chk], transform.position, roomPresets.RBs[chk].transform.rotation, parent);
         else if (objName == "RL")
-            Instantiate(roomPresets.RLs[chk], transform.position, roomPresets.RLs[chk].transform.rotation);
+            Instantiate(roomPresets.RLs[chk], transform.position, roomPresets.RLs[chk].transform.rotation, parent);
         else if (objName == "BL")
-            Instantiate(roomPresets.BLs[chk], transform.position, roomPresets.BLs[chk].transform.rotation);
+            Instantiate(roomPresets.BLs[chk], transform.position, roomPresets.BLs[chk].transform.rotation, parent);
         else if (objName == "TRB")
-            Instantiate(roomPresets.TRBs[chk], transform.position, roomPresets.TRBs[chk].transform.rotation);
+            Instantiate(roomPresets.TRBs[chk], transform.position, roomPresets.TRBs[chk].transform.rotation, parent);
         else if (objName == "TRL")
-            Instantiate(roomPresets.TRLs[chk], transform.position, roomPresets.TRLs[chk].transform.rotation);
+            Instantiate(roomPresets.TRLs[chk], transform.position, roomPresets.TRLs[chk].transform.rotation, parent);
         else if (objName == "TBL")
-            Instantiate(roomPresets.TBLs[chk], transform.position, roomPresets.TBLs[chk].transform.rotation);
+            Instantiate(roomPresets.TBLs[chk], transform.position, roomPresets.TBLs[chk].transform.rotation, parent);
         else if (objName == "RBL")
-            Instantiate(roomPresets.RBLs[chk], transform.position, roomPresets.RBLs[chk].transform.rotation);
+            Instantiate(roomPresets.RBLs[chk], transform.position, roomPresets.RBLs[chk].transform.rotation, parent);
         else if (objName == "TRBL")
-            Instantiate(roomPresets.TRBLs[chk], transform.position, roomPresets.TRBLs[chk].transform.rotation);
+            Instantiate(roomPresets.TRBLs[chk], transform.position, roomPresets.TRBLs[chk].transform.rotation, parent);
         if (counter!=0)
             SetLayout(chk);
     }
@@ -220,12 +228,12 @@ public class RoomSpawner : MonoBehaviour
         if (type == 0)
         {
             int ind = Random.Range(0, roomLayouts.boxLayouts.Length);
-            Instantiate(roomLayouts.boxLayouts[ind], transform.position, roomLayouts.boxLayouts[ind].transform.rotation);
+            Instantiate(roomLayouts.boxLayouts[ind], transform.position, roomLayouts.boxLayouts[ind].transform.rotation, parent);
         }
         else
         {
             int ind = Random.Range(0, roomLayouts.boxLayouts.Length);
-            Instantiate(roomLayouts.circleLayouts[ind], transform.position, roomLayouts.boxLayouts[ind].transform.rotation);
+            Instantiate(roomLayouts.circleLayouts[ind], transform.position, roomLayouts.boxLayouts[ind].transform.rotation, parent);
         }
     }
 

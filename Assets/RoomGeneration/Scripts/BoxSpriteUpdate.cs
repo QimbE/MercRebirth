@@ -5,10 +5,16 @@ public class BoxSpriteUpdate : MonoBehaviour
     SpriteRenderer topSpriteRenderer;
     SpriteRenderer bottomSpriteRenderer;
     public Sprite[] topSprites;
+    public Transform parent;
     public Sprite[] bottomSprites;
+    public float dropChance = 0.5f;
+    public GameObject drop;
     int health;
     int maxHealth;
-
+    private void Start()
+    {
+        parent = GameObject.FindGameObjectWithTag("SceneSpawner").GetComponent<Transform>();
+    }
     private void Update()
     {
         GameObject top = transform.GetChild(0).gameObject;
@@ -36,6 +42,16 @@ public class BoxSpriteUpdate : MonoBehaviour
         {
             topSpriteRenderer.sprite = topSprites[3];
             bottomSpriteRenderer.sprite = bottomSprites[3];
+        }
+    }
+    public void BoxDeath()
+    {
+        Debug.Log("ѕытаюсь дропнуть аптечку");
+        System.Random random = new System.Random();
+        double chance = random.NextDouble();
+        if (chance < dropChance)
+        {
+            Instantiate(drop, transform.position - new Vector3(0, 0.5f, 0), transform.rotation, parent);
         }
     }
 }

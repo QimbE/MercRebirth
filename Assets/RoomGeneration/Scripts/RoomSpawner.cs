@@ -3,6 +3,7 @@ using UnityEngine;
 public class RoomSpawner : MonoBehaviour
 {
     public Direction direction;
+    public static int maxCounter = 5;
     public enum Direction
     {
         Top,
@@ -25,7 +26,7 @@ public class RoomSpawner : MonoBehaviour
     private int rand;
     private bool isSpawned = false;
     private float waitTime = 3f;
-    static int counter = 0;
+    private static int counter = 0;
     private bool isTopFree = true;
     private bool isRightFree = true;
     private bool isBottomFree = true;
@@ -46,7 +47,7 @@ public class RoomSpawner : MonoBehaviour
     private void Update()
     {
         roomPresets = GameObject.FindGameObjectWithTag("RoomPresets").GetComponent<RoomPresets>();
-        if (counter==0 || counter>=50)
+        if (counter==0 || counter>=maxCounter)
         {
             singlewayRooms = GameObject.FindGameObjectWithTag("Rooms").GetComponent<SinglewayRooms>();
             cornerRooms = GameObject.FindGameObjectWithTag("Rooms").GetComponent<CornerRooms>();

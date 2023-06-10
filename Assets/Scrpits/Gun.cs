@@ -104,6 +104,7 @@ public class Gun : MonoBehaviour
                 else
                 {
                     Instantiate(bullet, shotPoint.position, Quaternion.Euler(0f, 0f, rotZ + offset));
+                    GetComponent<Animator>().SetBool("isShot", true);
                 }
                 timeBtwShots = startTimeBtwShots;
             }
@@ -111,6 +112,22 @@ public class Gun : MonoBehaviour
         else
         {
             timeBtwShots -= Time.deltaTime;
+        }
+        //transform.position = new Vector3(UnityEngine.Random.Range(0, 2), UnityEngine.Random.Range(0, 2));
+    }
+    public void LateUpdate()
+    {
+        Vector3 difference1 = Camera.main.ScreenToWorldPoint(Input.mousePosition) - playerTransform.position;
+        float rotZ1 = Mathf.Atan2(difference1.y, difference1.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rotZ1 + offset);
+        transform.position = transform.position  + difference1.normalized*0.7f;
+        if (math.abs(rotZ1) > 90)
+        {
+            transform.localScale = new Vector3(-1, -1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
     public void StockAttackDealDamage()
@@ -134,6 +151,10 @@ public class Gun : MonoBehaviour
     public void StopStockAttack()
     {
         GetComponent<Animator>().SetBool("isStockAttack", false);
+    }
+    public void StopShot()
+    {
+        GetComponent<Animator>().SetBool("isShot", false);
     }
     private void OnDrawGizmosSelected()
     {

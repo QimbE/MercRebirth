@@ -28,6 +28,7 @@ public class Movement : MonoBehaviour
         if (horizontalMove==0 && verticalMove==0)
         {
             anim.SetBool("isRunning", false);
+            rigidBody.velocity = Vector3.zero;
         }
         else
         {

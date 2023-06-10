@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static InstantUseItem;
 
 public class Stats : MonoBehaviour
 {
@@ -15,14 +16,18 @@ public class Stats : MonoBehaviour
     public int energy;
     public int maxEnergy;
     public int energyRechargePerSec;
+    internal float rechargeFreq = 1;
+
+    public float timeBetweenDamage = 0.5f;
 
     public int critChance;
     public int critMultiplier;
 
     public bool isPlayer = false;
 
-    private float currentTime = 0;
-
+    private float currentTimeBetweenRecharge = 0;
+    private float currentTimeBetweenDamage = 0;
+    
     public int Armor
     {
         get => armor;
@@ -113,27 +118,31 @@ public class Stats : MonoBehaviour
             {
                 //on player death
             }
-        } 
+        }
 
-
+        currentTimeBetweenDamage += Time.deltaTime;
     }
     public void TakeDamage(int damage)
     {
-        Armor -= damage;
-        if (Armor < 0)
+        if ((isPlayer && currentTimeBetweenDamage >= timeBetweenDamage) || (!isPlayer))
         {
-            Health += Armor;
-            Armor = 0;
+            Armor -= damage;
+            if (Armor < 0)
+            {
+                Health += Armor;
+                Armor = 0;
+            }
+            currentTimeBetweenDamage = 0;
         }
     }
     public void EnergyCharging()
     {
         if (Energy < maxEnergy)
         {
-            if (currentTime >= 1)
+            if (currentTimeBetweenRecharge >= rechargeFreq)
             {
                 Energy += energyRechargePerSec;
-                currentTime = 0;
+                currentTimeBetweenRecharge = 0;
             }
         }
         else if (isPlayer)
@@ -144,6 +153,21 @@ public class Stats : MonoBehaviour
         {
             //Enemy activates smth
         }
-        currentTime += Time.deltaTime;
+        currentTimeBetweenRecharge += Time.deltaTime;
+    }
+    public void AddStat(StatsList StatToIncrease, int increase)
+    {
+        switch (StatToIncrease)
+        {
+            case StatsList.Armor: 
+                this.Armor += increase;
+                break;
+            case StatsList.Health: 
+                this.Health += increase;
+                break;
+            case StatsList.Energy: 
+                this.Energy += increase;
+                break;
+        }
     }
 }

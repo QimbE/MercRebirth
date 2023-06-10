@@ -17,6 +17,7 @@ public class DefaultEnemyAI : MonoBehaviour
     public float friction = 0.7f;
 
     private Rigidbody2D rb;
+    private Rigidbody2D playerRb;
     private bool isRunning;
     private bool isInAttackRange;
     private Transform anchor;
@@ -28,8 +29,10 @@ public class DefaultEnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        playerStats = GameObject.FindWithTag("Player").GetComponent<Stats>();
+        GameObject tempPlayer = GameObject.FindWithTag("Player");
+        playerTransform = tempPlayer.GetComponent<Transform>();
+        playerStats = tempPlayer.GetComponent<Stats>();
+        playerRb = tempPlayer.GetComponent<Rigidbody2D>();
         rb = GetComponent<Rigidbody2D>();
         selfStats = GetComponent<Stats>();
         List<GameObject> anchors= new List<GameObject>(GameObject.FindGameObjectsWithTag("Anchor"));
@@ -67,7 +70,7 @@ public class DefaultEnemyAI : MonoBehaviour
     {
         if (isRunning && !isInAttackRange)
         {
-            MoveCharacter(movement);
+            MoveCharacter((movement+playerRb.velocity*0.01f).normalized);
         }
         else if (isInAttackRange)
         {

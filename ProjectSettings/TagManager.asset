@@ -8,6 +8,11 @@ TagManager:
   - Gun
   - Melee
   - Enemy
+  - Rooms
+  - RoomPoint
+  - RoomPresets
+  - Wall
+  - Anchor
   layers:
   - Default
   - TransparentFX
@@ -16,7 +21,7 @@ TagManager:
   - Water
   - UI
   - Enemies and walls
-  - 
+  - Player
   - 
   - 
   - 

@@ -67,9 +67,18 @@ public class Stats : MonoBehaviour
             {
                 health = maxHealth;
             }
-            else if (value < 0)
+            else if (value <= 0)
             {
                 health = 0;
+                if (!isPlayer)
+                {
+                    OnDeathActivation();
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    OnDeathActivation();
+                }
             }
             else
             {
@@ -129,19 +138,6 @@ public class Stats : MonoBehaviour
     {
         EnergyCharging();
         ArmorRegen();
-        if (Health <= 0)
-        {
-            if (!isPlayer)
-            {
-                OnDeathActivation();
-                Destroy(gameObject);
-            }
-            else
-            {
-                OnDeathActivation();
-            }
-        }
-        currentTimeBetweenArmorRegen += Time.deltaTime;
         currentTimeBetweenDamage += Time.deltaTime;
     }
     public void OnDeathActivation()
@@ -169,6 +165,7 @@ public class Stats : MonoBehaviour
             Armor += armorIncrease;
             currentTimeBetweenArmorRegen = 0;
         }
+        currentTimeBetweenArmorRegen += Time.deltaTime;
     }
     public void EnergyCharging()
     {

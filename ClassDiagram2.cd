@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BoxSpriteUpdate">
+    <Position X="23.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAQIACCAAABAEgAAAAAAAAAAAAAAEAAAAAAAgAw=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\BoxSpriteUpdate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CornerRooms">
+    <Position X="27.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAAAAAgAAAAAAAAEAAAAAAAAAAAAUAAAAAAAA=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\CornerRooms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Directions">
+    <Position X="33" Y="14" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Directions.Direction">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\RoomGeneration\Scripts\Directions.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\Directions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoorActivator">
+    <Position X="31.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AISCAAgAACJAAABAAAAAEFAAAAAAAAEBAAAAAAUAAAI=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\DoorActivator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoorTrigger">
+    <Position X="33.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\DoorTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyCounter">
+    <Position X="29.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\EnemyCounter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyPlacer">
+    <Position X="29.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEoAAAACIEAABABAAAAAAABAAAAAABAAQAAAEQiBA=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\EnemyPlacer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySpawner">
+    <Position X="33.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAABAAAAAAAAAAAAAAAABAAAAAAAQAAA=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\EnemySpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyTypes">
+    <Position X="29.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\EnemyTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirstDoorDeleter">
+    <Position X="31.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\FirstDoorDeleter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MultiwayRooms">
+    <Position X="27.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAAAAAAAAAAAAAAAACAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\MultiwayRooms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoomLayouts">
+    <Position X="29.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\RoomLayouts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoomPresets">
+    <Position X="31.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAQYAAIAAAAAAAAACAAAABgCCgAAAAAAAEAQAAA=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\RoomPresets.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoomSpawner">
+    <Position X="35" Y="6.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="RoomSpawner.Direction" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\RoomGeneration\Scripts\RoomSpawner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AFQACIEQACBgIAFAAAAQAAAAAACABBkAABBAAAAAAAA=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\RoomSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SinglewayRooms">
+    <Position X="29.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAAAAAAAAAAAAAAAACAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\RoomGeneration\Scripts\SinglewayRooms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BarSlider">
+    <Position X="25.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQYAAAQAACQAAgAAAIAAAABQAAAAAAABAAAIAAABAAI=</HashCode>
+      <FileName>Assets\Scrpits\BarSlider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bullet">
+    <Position X="12.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAQAAAAAgAAiAAAAAAAAAEAAAQAAAAAAAABACAQ=</HashCode>
+      <FileName>Assets\Scrpits\Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraMovement">
+    <Position X="20.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAAAAAAAAAAAAACAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scrpits\CameraMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DaggerBladeAI">
+    <Position X="8.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAIQQAAiIgAyBABAAAAUAABSAAAQAAAQAABAAAAEA=</HashCode>
+      <FileName>Assets\Scrpits\DaggerBladeAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy">
+    <Position X="6.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAQQQAAAEoAAEAAAAAAAAAAAAAAAAAAAwAAAAAAA=</HashCode>
+      <FileName>Assets\Scrpits\DefaultEnemyAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DefaultEnemyAI">
+    <Position X="4.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAUQAAiIQAABABAAAAQAABQAAAQAAAQAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scrpits\DefaultEnemyAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DroneAI">
+    <Position X="6.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAZAAQQAIiAAAAFAAAAAAgAACQAAAQAAABAIAAAABAA=</HashCode>
+      <FileName>Assets\Scrpits\DroneAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameSaver">
+    <Position X="20.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scrpits\GameSaver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlobalEnemyCounter">
+    <Position X="28" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IARCAAAAACAAAEBBAAAQAAQBAAAAAAABAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\Scrpits\GlobalEnemyCounter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gun">
+    <Position X="16" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AATAAAQSIAIAAAFABAgAIgAAGQAAAAIAABAQAAACCAA=</HashCode>
+      <FileName>Assets\Scrpits\Gun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InstantUseItem">
+    <Position X="20.25" Y="14.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="InstantUseItem.StatsList" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scrpits\InstantUseItem.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAADAAAACAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scrpits\InstantUseItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu">
+    <Position X="18.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAABAAAAIAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\Scrpits\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Melee">
+    <Position X="16" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEQAAAIAoAAABAgAAAQAAABAAAAAAUAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scrpits\Melee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Movement">
+    <Position X="14.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAAiAAAAAAAAAAACABAQAAEQAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scrpits\Movement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenHelper">
+    <Position X="18.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scrpits\OpenHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseMenu">
+    <Position X="22" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAABAACAQAAAAAAAAAAAQAAAAAAAAAEAACAgAIAA=</HashCode>
+      <FileName>Assets\Scrpits\PauseMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortalScript">
+    <Position X="18.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAQCBAABAAAAAAgAAAAAABAAAAAQAAACCgAQA=</HashCode>
+      <FileName>Assets\Scrpits\PortalScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneSpawner">
+    <Position X="24" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\Scrpits\SceneSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Stats">
+    <Position X="10.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgQACQIIACAAgAQIAAQEAKEAAEEGACACEBAQrBAAAAg=</HashCode>
+      <FileName>Assets\Scrpits\Stats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Storage">
+    <Position X="18.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAACAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scrpits\Storage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameData">
+    <Position X="12.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAIAAAAgAQIAAAAAAEAAEEAAAAAAAAALBAAAAg=</HashCode>
+      <FileName>Assets\Scrpits\Storage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UltimateAbility">
+    <Position X="14.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAARCACIAgIAAIABgIBIgAAAAJACASBBQAAIAAAA=</HashCode>
+      <FileName>Assets\Scrpits\UltimateAbility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Upgrade">
+    <Position X="22" Y="14.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Upgrade.UpProperty">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scrpits\Upgrade.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QAgAAAAAACAgAACAAAQAAAQAAAAAAAABAAAgAQAAAAA=</HashCode>
+      <FileName>Assets\Scrpits\Upgrade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeaponSwap">
+    <Position X="12.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scrpits\WeaponSwap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoader">
+    <Position X="22" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GameLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgMenuOpen">
+    <Position X="20.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\ProgMenuOpen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpgradePlacer">
+    <Position X="23.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAABAAAAAACAAAEAAABAAAAAAAACAA=</HashCode>
+      <FileName>Assets\UpgradePlacer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
